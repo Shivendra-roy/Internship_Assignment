@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logo – Simplifying Compliance For Research Analysts</title>
+
+  <!--
+    Google Fonts: Inter (matches the Figma design's sans-serif typeface)
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===========================================================
+       SIDEBAR OVERLAY  (mobile – closes drawer on outside click)
+       =========================================================== -->
+  <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()" role="presentation"></div>
+
+  <!-- ===========================================================
+       MOBILE SIDEBAR DRAWER
+       =========================================================== -->
+  <aside class="sidebar" id="sidebar" aria-label="Mobile navigation" aria-hidden="true">
+
+    <!-- Header: logo + close -->
+    <div class="sidebar__head">
+      <a href="#" onclick="closeSidebar()">
+        <img src="assets/Logo.png" alt="Logo" />
+      </a>
+      <button class="sidebar__close" onclick="closeSidebar()" aria-label="Close navigation menu">&#x2715;</button>
+    </div>
+
+    <!-- Navigation links with icons (matching the Figma sidebar exactly) -->
+    <nav class="sidebar__nav">
+      <a href="#"          class="active" onclick="closeSidebar()">
+        <img src="assets/Home.png"         alt="" aria-hidden="true" /> Home
+      </a>
+      <a href="#about"                   onclick="closeSidebar()">
+        <img src="assets/AboutUs.png"       alt="" aria-hidden="true" /> About Us
+      </a>
+      <a href="#services"                onclick="closeSidebar()">
+        <img src="assets/Our Services.png"  alt="" aria-hidden="true" /> Our Services
+      </a>
+      <a href="#pricing"                 onclick="closeSidebar()">
+        <img src="assets/Pricing.png"       alt="" aria-hidden="true" /> Pricing
+      </a>
+      <a href="#faq"                     onclick="closeSidebar()">
+        <img src="assets/FAQ.png"           alt="" aria-hidden="true" /> FAQ
+      </a>
+      <a href="#contact"                 onclick="closeSidebar()">
+        <img src="assets/Contact.png"       alt="" aria-hidden="true" /> Contact
+      </a>
+    </nav>
+
+    <!-- CTA at bottom of sidebar -->
+    <div class="sidebar__footer">
+      <a href="#" class="btn-primary" onclick="closeSidebar()">Contact Us</a>
+    </div>
+  </aside>
+
+  <!-- ===========================================================
+       HEADER + NAVBAR
+       =========================================================== -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar__inner">
+
+        <!-- Logo -->
+        <a href="#" class="navbar__logo" aria-label="Go to homepage">
+          <img src="assets/Logo.png" alt="Logo" />
+        </a>
+
+        <!-- Desktop navigation links -->
+        <ul class="navbar__links" role="list">
+          <li><a href="#"        class="active">Home</a></li>
+          <li><a href="#about"  >About Us</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#pricing" >Pricing</a></li>
+          <li><a href="#faq"    >FAQ</a></li>
+          <li><a href="#contact" >Contact</a></li>
+        </ul>
+
+        <!-- Desktop "Get Started" CTA -->
+        <a href="#" class="navbar__get-started" style="align-items: center; background: none; padding: 0;">
+            <img src="images/Buttons.png" alt="Contact Us Button" style="height: 42px; vertical-align: middle;" />
+        </a>
+
+        <!-- Mobile hamburger button -->
+        <button
+          class="navbar__hamburger"
+          id="hamburgerBtn"
+          onclick="openSidebar()"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="sidebar"
+        >
+          <img src="assets/Menu.png" alt="" aria-hidden="true" />
+        </button>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===========================================================
+       MAIN CONTENT
+       =========================================================== -->
+  <main>
+
+    <!-- =========================================================
+         SECTION 1 – HERO
+         ========================================================= -->
+    <section aria-label="Hero – Simplifying Compliance For Research Analysts">
+      <div class="hero">
+
+        <!-- ── Left: text content ────────────────────────────── -->
+        <div class="hero__left">
+
+          <!-- Decorative chevron/arrow graphic (Vector1) -->
+          <div class="hero__arrows" aria-hidden="true">
+            <img src="assets/Vector1.png" alt="" />
+          </div>
+
+          <!-- Main heading -->
+          <h1 class="hero__title">
+            Simplifying<br />
+            <!-- "Compliance" with blue colour + decorative underline stroke -->
+            <span class="compliance-word">
+              Compliance
+              <img src="assets/underline-Vector.png" alt="" aria-hidden="true" />
+            </span>
+            &nbsp;For<br />
+            Research Analysts
+          </h1>
+
+          <!-- Sub-description -->
+          <p class="hero__desc">
+            To achieve truly great work, we have assembled a group of passionate problem solvers
+            who are hard-working, creative, and laser-focused on building the future of compliance
+            in the research industry.
+          </p>
+
+          <!-- Three check-mark bullets -->
+          <ul class="hero__checklist" aria-label="Key benefits">
+            <li class="hero__check">
+              <img src="assets/check-sign.png" alt="✓" />
+              <span>Regulatory Risk Protection</span>
+            </li>
+            <li class="hero__check">
+              <img src="assets/check-sign.png" alt="✓" />
+              <span>Hassle-Free Compliance Filings</span>
+            </li>
+            <li class="hero__check">
+              <img src="assets/check-sign.png" alt="✓" />
+              <span>Regulatory Clarity &amp; Guidance</span>
+            </li>
+          </ul>
+
+          <!-- CTA buttons -->
+          <div class="hero__ctas">
+            <a href="#"        class="btn-primary">Get Started</a>
+            <a href="#about"   class="btn-outline">Find Out More</a>
+          </div>
+
+        </div>
+
+        <!-- ── Right: hero illustration ──────────────────────── -->
+        <div class="hero__right" aria-hidden="true">
+          <img
+            src="assets/Banner Image.png"
+            alt="Research analyst standing with laptop, showing trust and ratings badges"
+          />
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 2 – WHY COMPLIANCE MATTERS
+         ========================================================= -->
+    <section class="why" id="about" aria-label="Why Compliance Matters For Research Analysts">
+      <div class="why__inner">
+
+        <!-- ── Left: illustration ────────────────────────────── -->
+        <div class="why__image" aria-hidden="true">
+          <img
+            src="assets/Section2-Image.png"
+            alt="Analyst reviewing compliance chart dashboard on laptop"
+          />
+        </div>
+
+        <!-- ── Right: heading + feature list ─────────────────── -->
+        <div class="why__content">
+
+          <h2 class="why__title">
+            Why <span class="blue">Compliance Matters</span><br />
+            For Research Analysts
+          </h2>
+
+          <p class="why__desc">
+            Adhering to compliance standards ensures that research analysts operate
+            with integrity, avoid legal pitfalls, and maintain the trust of clients
+            and regulators alike. Proper compliance frameworks protect both the
+            analyst and the firm they represent at every stage.
+          </p>
+
+          <!-- Three feature items with icons from assets -->
+          <ul class="why__features" aria-label="Compliance features">
+
+            <li class="why__feat">
+              <div class="why__feat-icon" aria-hidden="true">
+                <img src="assets/Regulatory Clarity.png" alt="" />
+              </div>
+              <div class="why__feat-text">
+                <h4>Regulatory Clarity</h4>
+                <p>Stay updated with the latest regulatory requirements
+                   tailored specifically for research analysts in your sector.</p>
+              </div>
+            </li>
+
+            <li class="why__feat">
+              <div class="why__feat-icon" aria-hidden="true">
+                <img src="assets/Hassle-Free Filings Clarity.png" alt="" />
+              </div>
+              <div class="why__feat-text">
+                <h4>Hassle-Free Filings Clarity</h4>
+                <p>To help your company adhere to the law and demonstrate
+                   your commitment to fair business practices in all filing procedures.</p>
+              </div>
+            </li>
+
+            <li class="why__feat">
+              <div class="why__feat-icon" aria-hidden="true">
+                <img src="assets/Risk Protection.png" alt="" />
+              </div>
+              <div class="why__feat-text">
+                <h4>Risk Protection</h4>
+                <p>Identify, assess, and mitigate compliance risks before they
+                   become costly regulatory violations or reputational issues.</p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- JS scripts -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
+
+
+
